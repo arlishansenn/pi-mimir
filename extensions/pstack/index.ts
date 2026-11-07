@@ -108,6 +108,7 @@ export default function(pi: ExtensionAPI) {
       ctx.ui.setStatus("pstack-mode", "pstack: poteto mode");
       pi.sendUserMessage(
         `/skill:poteto-mode${args.trim() ? ` ${args.trim()}` : ""}`,
+        { deliverAs: "followUp" },
       );
     },
   });
